@@ -1,0 +1,16 @@
+[[plugins]]
+repo = "Shougo/dein.vim"
+
+[[plugins]]
+repo = "majutsushi/tagbar"
+
+[[plugins]]
+repo = "junegunn/fzf"
+build = "./install --all"
+
+[[plugins]]
+repo = "junegunn/fzf.vim"
+depends = "fzf"
+
+[[plugins]]
+repo = "w0rp/ale"

@@ -9,7 +9,7 @@ do
 	[[ "$f" == ".DS_Store" ]] && continue
 	[[ -d "$f" ]] && continue
 
-#	ln -s $dir/"$f" ~/"$f"
+	ln -s $dir/"$f" ~/"$f"
 
 	echo "$f"
 done
