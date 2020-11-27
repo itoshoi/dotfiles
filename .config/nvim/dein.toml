@@ -14,3 +14,15 @@ depends = "fzf"
 
 [[plugins]]
 repo = "w0rp/ale"
+
+[[plugins]]
+repo = "scrooloose/nerdtree"
+
+[[plugins]]
+repo = "vim-airline/vim-airline"
+
+[[plugins]]
+repo = "vim-airline/vim-airline-themes"
+
+[[plugins]]
+repo = "ryanoasis/vim-devicons"

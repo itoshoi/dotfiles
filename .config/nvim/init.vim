@@ -24,6 +24,14 @@ nmap <F8> :TagbarToggle<CR>
 nnoremap <leader>fo :Files<CR>
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
+
+" vim-airline
+let g:airline_theme = 'wombat'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
 " OmniSharpの設定
 autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
 autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
