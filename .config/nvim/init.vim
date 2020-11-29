@@ -8,29 +8,47 @@ let g:ale_linters = {
 \ 'cs': ['OmniSharp']
 \}
 
+" コメントアウトに使う記号
+autocmd FileType cs setlocal commentstring=//\ %s
+
 " 画面端まで行っても改行しない
 set nowrap
+
 " tabはspace 4つ
 set tabstop=4
 set shiftwidth=4
 
+" clipboardを連携
+set clipboard=unnamed,unnamedplus
+
 set scrolloff=5
+
+" deinのアンインストール時にはこれを使う
+" let g:dein#auto_recache = 1
 
 " 行番号を表示
 set number
 
-" キーコンフィグ
+" ctagsのツリー表示
 nmap <F8> :TagbarToggle<CR>
+
+" fzf
 nnoremap <leader>fo :Files<CR>
+
+" コード補完をタブで選択可能にする
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
 " vim-airline
-let g:airline_theme = 'wombat'
+let g:airline_theme = 'luna'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+
+" CheatSheetの設定
+let g:cheatsheet#cheat_file = '~/.config/nvim/cheatsheet.md'
+let g:cheatsheet#float_window = 1
 
 " OmniSharpの設定
 autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>

@@ -26,3 +26,23 @@ repo = "vim-airline/vim-airline-themes"
 
 [[plugins]]
 repo = "ryanoasis/vim-devicons"
+
+[[plugins]]
+repo = "tpope/vim-commentary"
+
+[[plugins]]
+repo = "jiangmiao/auto-pairs"
+
+[[plugins]]
+repo = "reireias/vim-cheatsheet"
+
+[[plugins]]
+repo = "plasticboy/vim-markdown"
+
+[[plugins]]
+repo = "iamcco/markdown-preview.nvim"
+on_ft = ["markdown", "pandoc.markdown", "rmd"]
+build = "sh -c 'cd app && yarn install'"
+
+[[plugins]]
+repo = "godlygeek/tabular"
