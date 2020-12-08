@@ -12,8 +12,8 @@ build = "./install --all"
 repo = "junegunn/fzf.vim"
 depends = "fzf"
 
-[[plugins]]
-repo = "w0rp/ale"
+# [[plugins]]
+# repo = "w0rp/ale"
 
 [[plugins]]
 repo = "scrooloose/nerdtree"
@@ -46,3 +46,49 @@ build = "sh -c 'cd app && yarn install'"
 
 [[plugins]]
 repo = "godlygeek/tabular"
+
+[[plugins]]
+repo = "easymotion/vim-easymotion"
+
+[[plugins]]
+repo = "prabirshrestha/vim-lsp"
+
+[[plugins]]
+repo = "mattn/vim-lsp-settings"
+
+[[plugins]]
+repo = "mattn/vim-lsp-icons"
+
+[[plugins]]
+repo = "prabirshrestha/asyncomplete.vim"
+
+[[plugins]]
+repo = "prabirshrestha/asyncomplete-lsp.vim"
+
+[[plugins]]
+repo = "prabirshrestha/asyncomplete-file.vim"
+
+[[plugins]]
+repo = "Shougo/neco-syntax"
+
+[[plugins]]
+repo = "prabirshrestha/asyncomplete-necosyntax.vim"
+
+[[plugins]]
+repo = "Shougo/neco-vim"
+
+[[plugins]]
+repo = "prabirshrestha/asyncomplete-necovim.vim"
+
+[[plugins]]
+repo = "Shougo/neosnippet.vim"
+
+[[plugins]]
+repo = "Shougo/neosnippet-snippets"
+
+[[plugins]]
+repo = "prabirshrestha/asyncomplete-neosnippet.vim" 
+
+[[plugins]]
+repo = "morhetz/gruvbox"
+

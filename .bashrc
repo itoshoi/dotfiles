@@ -125,9 +125,5 @@ eval `cat ~/.fehbg`
 # wheel speed become fast
 imwheel
 
-# alias (fishで設定した)
-# alias cdUnityProject='cd /media/tmls/Windows/Users/uranu/UnityProject/'
-# alias cdptf='cd /media/tmls/Windows/Users/uranu/UnityProject/'
-
 exec fish
 
