@@ -123,7 +123,7 @@ eval `cat ~/.fehbg`
 # xrandr --output DVI-D-0 --left-of HDMI-0
 
 # wheel speed become fast
-imwheel
+# imwheel
 
 exec fish
 

@@ -92,3 +92,17 @@ repo = "prabirshrestha/asyncomplete-neosnippet.vim"
 [[plugins]]
 repo = "morhetz/gruvbox"
 
+[[plugins]]
+repo = 'mbbill/undotree'
+
+[[plugins]]
+repo = 'mattn/vim-sonictemplate'
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "tpope/vim-rhubarb"

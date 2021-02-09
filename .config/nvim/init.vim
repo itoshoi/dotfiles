@@ -32,6 +32,12 @@ if dein#check_install()
 endif
 " -------------------------------------------------------------------------------------" フォントサイズ
 
+" undo folder
+if has('persistent_undo')
+	set undodir=~/.config/nvim/undo
+	set undofile
+endif
+
 " フォントサイズ
 let s:fontsize = 11
 
@@ -54,6 +60,11 @@ colorscheme gruvbox
 " let g:ale_linters = {
 " \ 'cs': ['OmniSharp']
 " \}
+
+" template
+let g:sonictemplate_vim_template_dir = [
+	\ '~/.config/nvim/template'
+	\]
 
 " コメントアウトに使う記号
 autocmd FileType cs setlocal commentstring=//\ %s
@@ -124,6 +135,9 @@ nnoremap K :LspHover<CR>
 
 " vimtex
 let g:vimtex_compiler_latexmk = {'continuous' : 0}
+
+" undotree
+nnoremap <leader>u :UndotreeToggle<cr>
 
 " " OmniSharpの設定 (lsp-vimに移行)
 " autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
