@@ -120,6 +120,7 @@ let g:cheatsheet#float_window = 1
 " let g:lsp_text_edit_enabled = 1
 " set completeopt=
 let g:lsp_semantic_enabled=1 
+let g:lsp_log_file = expand('~/.config/nvim/vim-lsp.log')
 
 let g:lsp_preview_max_height=5
 " let g:lsp_preview_max_width=1
