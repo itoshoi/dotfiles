@@ -113,24 +113,30 @@ let g:cheatsheet#float_window = 1
 
 " lsp-vim
 " let g:lsp_diagnostics_enabled = 1
-" let g:lsp_diagnostics_echo_cursor = 1
+let g:lsp_diagnostics_echo_cursor = 1
+" let g:lsp_diagnostics_float_cursor = 1
+" let g:lsp_diagnostics_highlights_enabled = 0
 " let g:asyncomplete_auto_popup = 1
 " let g:asyncomplete_auto_completeopt = 0
 " let g:asyncomplete_popup_delay = 200
 " let g:lsp_text_edit_enabled = 1
 " set completeopt=
 let g:lsp_semantic_enabled=1 
-
 let g:lsp_preview_max_height=5
 " let g:lsp_preview_max_width=1
+
+autocmd VimEnter * :highlight link LspWarningHighlight ALEWarning
 
 nnoremap gd :LspDefinition<CR>
 nnoremap gr :LspReferences<CR>
 nnoremap gi :LspImplementation<CR>
 nnoremap gt :LspTypeDefinition<CR>
 nnoremap <leader>rn :LspRename<CR>
+nnoremap <leader>df :LspDocumentFormatSync<CR>
 nnoremap [g :LspPreviousDiagnostic<CR>
 nnoremap ]g :LspNextDiagnostic<CR>
+nnoremap [e :LspNextError<CR>
+nnoremap ]e :LspPreviousError<CR>
 nnoremap K :LspHover<CR>
 
 " vimtex
