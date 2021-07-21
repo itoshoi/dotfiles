@@ -106,3 +106,21 @@ repo = "tpope/vim-fugitive"
 
 [[plugins]]
 repo = "tpope/vim-rhubarb"
+
+[[plugins]]
+repo = "miyakogi/seiya.vim"
+
+[[plugins]]
+repo = "xolox/vim-misc"
+
+[[plugins]]
+repo = "xolox/vim-session"
+
+[[plugins]]
+repo = "glidenote/memolist.vim"
+
+[[plugins]]
+repo = "chrisbra/csv.vim"
+
+[[plugins]]
+repo = "cocopon/iceberg.vim"
