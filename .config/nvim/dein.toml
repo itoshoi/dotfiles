@@ -7,6 +7,7 @@ repo = "majutsushi/tagbar"
 [[plugins]]
 repo = "junegunn/fzf"
 build = "./install --all"
+dir = "/usr/local/bin/fzf"
 
 [[plugins]]
 repo = "junegunn/fzf.vim"
@@ -106,3 +107,6 @@ repo = "tpope/vim-fugitive"
 
 [[plugins]]
 repo = "tpope/vim-rhubarb"
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
