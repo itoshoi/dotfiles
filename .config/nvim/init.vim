@@ -76,6 +76,14 @@ set nowrap
 " tabはspace 4つ
 set tabstop=4
 set shiftwidth=4
+set expandtab
+
+" デフォルトでないファイルタイプの設定
+autocmd BufNewFile,BufRead *.csv setfiletype csv
+
+" 改行コードをLFで統一
+autocmd FileType cs se ff=unix
+autocmd FileType csv se ff=unix
 
 " clipboardを連携
 set clipboard=unnamed,unnamedplus
@@ -93,6 +101,34 @@ nmap <F8> :TagbarToggle<CR>
 
 " fzf
 nnoremap <leader>fo :Files<CR>
+nnoremap <leader><leader> :GFiles<CR>
+nnoremap <leader>gg :GFiles<CR>
+
+" nnoremap <leader>fo :call fzf#run(fzf#wrap({'source': 'ls *.cs'}))
+
+" session
+nnoremap <leader>s1 :SaveSession! 1<CR>
+nnoremap <leader>s2 :SaveSession! 2<CR>
+nnoremap <leader>s3 :SaveSession! 3<CR>
+nnoremap <leader>s4 :SaveSession! 4<CR>
+nnoremap <leader>s5 :SaveSession! 5<CR>
+nnoremap <leader>s6 :SaveSession! 6<CR>
+nnoremap <leader>s7 :SaveSession! 7<CR>
+nnoremap <leader>s8 :SaveSession! 8<CR>
+nnoremap <leader>s9 :SaveSession! 9<CR>
+nnoremap <leader>1 :OpenSession 1<CR>
+nnoremap <leader>2 :OpenSession 2<CR>
+nnoremap <leader>3 :OpenSession 3<CR>
+nnoremap <leader>4 :OpenSession 4<CR>
+nnoremap <leader>5 :OpenSession 5<CR>
+nnoremap <leader>6 :OpenSession 6<CR>
+nnoremap <leader>7 :OpenSession 7<CR>
+nnoremap <leader>8 :OpenSession 8<CR>
+nnoremap <leader>9 :OpenSession 9<CR>
+
+" memo
+let g:memolist_path = "~/.config/nvim/memo"
+let g:session_autosave = 'no'
 
 " コード補完をタブで選択可能にする
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -129,10 +165,15 @@ let g:lsp_preview_max_height=5
 
 autocmd VimEnter * :highlight link LspWarningHighlight ALEWarning
 
+" transparent background
+let g:seiya_auto_enable=1
+let g:seiya_target_groups = has('nvim') ? ['guibg'] : ['ctermbg']
+
 nnoremap gd :LspDefinition<CR>
 nnoremap gr :LspReferences<CR>
 nnoremap gi :LspImplementation<CR>
 nnoremap gt :LspTypeDefinition<CR>
+nnoremap qf :LspCodeAction<CR>
 nnoremap <leader>rn :LspRename<CR>
 nnoremap <leader>df :LspDocumentFormatSync<CR>
 nnoremap [g :LspPreviousDiagnostic<CR>
@@ -140,6 +181,7 @@ nnoremap ]g :LspNextDiagnostic<CR>
 nnoremap [e :LspNextError<CR>
 nnoremap ]e :LspPreviousError<CR>
 nnoremap K :LspHover<CR>
+autocmd BufWritePre * :LspDocumentFormatSync<CR>
 
 " vimtex
 let g:vimtex_compiler_latexmk = {'continuous' : 0}
@@ -147,7 +189,10 @@ let g:vimtex_compiler_latexmk = {'continuous' : 0}
 " undotree
 nnoremap <leader>u :UndotreeToggle<cr>
 
-" " OmniSharpの設定 (lsp-vimに移行)
+" resize window settings
+nnoremap <C-w>m <C-w>\| <C-w>_
+
+" OmniSharpの設定 (lsp-vimに移行)
 " autocmd FileType cs nnoremap gd :OmniSharpGotoDefinition<cr>
 " autocmd FileType cs nnoremap <leader>fi :OmniSharpFindImplementations<cr>
 " autocmd FileType cs nnoremap <leader>ft :OmniSharpFindType<cr>
