@@ -166,8 +166,8 @@ let g:lsp_preview_max_height=5
 autocmd VimEnter * :highlight link LspWarningHighlight ALEWarning
 
 " transparent background
-let g:seiya_auto_enable=1
-let g:seiya_target_groups = has('nvim') ? ['guibg'] : ['ctermbg']
+" let g:seiya_auto_enable=1
+" let g:seiya_target_groups = has('nvim') ? ['guibg'] : ['ctermbg']
 
 nnoremap gd :LspDefinition<CR>
 nnoremap gr :LspReferences<CR>
